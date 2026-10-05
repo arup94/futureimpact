@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Suggested Botanical Products Component - Future Impact
+   ========================================================================== */
+
+.suggested-products-section {
+  margin-top: 1rem;
+  margin-bottom: 4.5rem;
+}
+
+.suggested-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--primary-green, #1b301e);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.suggested-subheading {
+  font-size: 0.95rem;
+  color: var(--text-muted, #5a6b5e);
+  margin-bottom: 2rem;
+}
+
+.suggested-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+/* 5-item single row layout on combo page */
+.suggested-grid.combo-5-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .suggested-grid.combo-5-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .suggested-grid.combo-5-grid,
+  .suggested-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suggested-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border-light, rgba(27, 48, 30, 0.12));
+  border-radius: 18px;
+  padding: 1.25rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.suggested-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(45, 106, 79, 0.12);
+  border-color: rgba(45, 106, 79, 0.35);
+}
+
+.suggested-thumb {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8faf6;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.suggested-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.suggested-card:hover .suggested-thumb img {
+  transform: scale(1.08);
+}
+
+.suggested-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark, #152417);
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.suggested-card:hover .suggested-title {
+  color: var(--accent-gold, #c89d53);
+}
+
+.suggested-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted, #5a6b5e);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.suggested-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold, #c89d53);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.suggested-card:hover .suggested-link {
+  gap: 0.6rem;
+  color: var(--primary-green, #1b301e);
+}

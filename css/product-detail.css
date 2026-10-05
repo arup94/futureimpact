@@ -1,0 +1,447 @@
+/* ==========================================================================
+   Product Detail Page Stylesheet - Minimal, Modern, Professional Botanical
+   ========================================================================== */
+
+:root {
+  --primary-green: #1b301e;
+  --accent-gold: #c89d53;
+  --accent-light: #f7f6f0;
+  --text-dark: #152417;
+  --text-muted: #5a6b5e;
+  --border-light: rgba(27, 48, 30, 0.12);
+  --font-main: 'Outfit', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #fdfdfb;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header */
+.product-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(253, 253, 251, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  color: var(--primary-green);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(27, 48, 30, 0.06);
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(27, 48, 30, 0.12);
+}
+
+/* Breadcrumb */
+.breadcrumb-bar {
+  max-width: 1240px;
+  margin: 1.5rem auto 0;
+  padding: 0 2rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb-bar a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb-bar a:hover {
+  color: var(--primary-green);
+}
+
+.breadcrumb-bar span {
+  margin: 0 0.4rem;
+}
+
+/* Main Layout */
+.product-detail-main {
+  max-width: 1240px;
+  margin: 2rem auto 5rem;
+  padding: 0 2rem;
+}
+
+.product-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4.5rem;
+}
+
+/* Gallery */
+.gallery-wrapper {
+  position: relative;
+}
+
+.main-image-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  box-shadow: 0 10px 30px rgba(27, 48, 30, 0.04);
+}
+
+.main-image-box img {
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.main-image-box img:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.thumb-btn {
+  width: 82px;
+  height: 82px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: #ffffff;
+  padding: 0.4rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.thumb-btn.active, .thumb-btn:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Info Panel */
+.product-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-tag-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.category-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.bestseller-badge {
+  background: #ff9900;
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.product-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stars {
+  color: #ffb703;
+  font-size: 1.1rem;
+}
+
+.rating-text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.amazon-brand-pill {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #b75e00;
+  background: rgba(255, 153, 0, 0.12);
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* Pack Selection */
+.pack-selector-box {
+  margin-bottom: 2rem;
+}
+
+.pack-label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--text-dark);
+}
+
+.pack-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.pack-btn {
+  padding: 0.8rem 1.4rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pack-btn .pack-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.pack-btn.active, .pack-btn:hover {
+  border-color: var(--primary-green);
+  background: rgba(27, 48, 30, 0.04);
+}
+
+.pack-btn.active {
+  border-width: 2px;
+  color: var(--primary-green);
+}
+
+.pack-btn.combo-btn {
+  background: #fdfaf2;
+  border-color: #e5be6b;
+}
+
+.pack-btn.combo-btn.active {
+  border-color: #b7791f;
+  background: #fef7e6;
+}
+
+/* Buy Button */
+.cta-action-wrap {
+  margin-bottom: 2.2rem;
+}
+
+.btn-buy-amazon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1.15rem 2rem;
+  background: #ff9900;
+  color: #111111;
+  font-size: 1.12rem;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(255, 153, 0, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-buy-amazon:hover {
+  background: #f08c00;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 153, 0, 0.38);
+}
+
+.btn-buy-amazon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Highlights */
+.highlights-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background: var(--accent-light);
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+.highlights-list li {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlights-list li::before {
+  content: "✓";
+  color: #2d8a4e;
+  font-weight: 800;
+}
+
+/* Details Sections */
+.details-section {
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.benefit-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+}
+
+.benefit-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.usage-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.usage-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-green);
+}
+
+.usage-steps {
+  padding-left: 1.4rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .main-image-box {
+    min-height: 380px;
+  }
+}

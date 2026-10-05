@@ -1,0 +1,233 @@
+/* ==========================================================================
+   The Future Impact Promise Section - Auto-Scrolling Single Row Marquee
+   ========================================================================== */
+
+.promise-section.light-theme {
+  position: relative;
+  z-index: 30;
+  background: #F4F7EF;
+  color: #1a1e1b;
+  padding: 6.5rem 0 7.5rem;
+  border-top: 1px solid rgba(27, 48, 30, 0.08);
+  overflow: hidden;
+}
+
+.promise-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.promise-header-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  padding: 0 2rem;
+}
+
+.promise-eyebrow {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #264e2d;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(45, 90, 54, 0.08);
+  border: 1px solid rgba(45, 90, 54, 0.2);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.promise-main-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #152417;
+  margin-bottom: 0.85rem;
+}
+
+.promise-main-title .text-accent-highlight {
+  color: #3B650A;
+}
+
+.promise-intro-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #556258;
+  line-height: 1.6;
+}
+
+/* Marquee Carousel Wrapper with Luxury Edge Gradients */
+.promise-marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+}
+
+.promise-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Pause scroll when hovering over the marquee track */
+.promise-marquee-container:hover .promise-track {
+  animation-play-state: paused !important;
+}
+
+/* Single-Row Flex Layout */
+.promise-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+/* Luxury Promise Card */
+.promise-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(27, 48, 30, 0.09);
+  border-radius: 24px;
+  padding: 2.8rem 2.2rem 2.5rem;
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 10px 30px rgba(27, 48, 30, 0.035), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.promise-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2d5a36, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.promise-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(27, 48, 30, 0.22);
+  box-shadow: 0 22px 48px rgba(27, 48, 30, 0.09), 0 4px 12px rgba(27, 48, 30, 0.03);
+}
+
+.promise-card:hover::after {
+  opacity: 1;
+}
+
+/* Icon Container */
+.promise-icon-wrap {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2f7f3 0%, #e5ede7 100%);
+  border: 1px solid rgba(27, 48, 30, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  color: #1b301e;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 6px 16px rgba(27, 48, 30, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+.promise-card:hover .promise-icon-wrap {
+  transform: scale(1.1) rotate(4deg);
+  background: #1b301e;
+  color: #ffffff;
+  border-color: #1b301e;
+}
+
+.promise-icon-svg {
+  width: 36px;
+  height: 36px;
+  transition: stroke 0.35s ease;
+}
+
+/* Card Typography */
+.promise-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: #152417;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.promise-desc {
+  font-size: 0.92rem;
+  color: #5d6d60;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* CSS Keyframe Continuous Auto Scroll Animation */
+@keyframes promiseAutoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.promise-track.marquee-active {
+  animation: promiseAutoScroll 38s linear infinite;
+}
+
+/* Accessibility: Reduce motion if preferred */
+@media (prefers-reduced-motion: reduce) {
+  .promise-track.marquee-active {
+    animation: none;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .promise-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .promise-section.light-theme {
+    padding: 4.5rem 0 5.5rem;
+  }
+  .promise-card {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    padding: 2.4rem 1.6rem 2rem;
+  }
+  .promise-icon-wrap {
+    width: 68px;
+    height: 68px;
+  }
+  .promise-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+  .promise-heading {
+    font-size: 1.2rem;
+  }
+}

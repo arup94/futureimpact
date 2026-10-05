@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Customer Review / Testimonial Section - Premium Light Mode
+   ========================================================================== */
+
+.customer-review-section.light-theme {
+  position: relative;
+  z-index: 30;
+  background: #F4F7EF;
+  color: #1a1e1b;
+  padding: 6.5rem 2.5rem 7.5rem;
+  border-top: 1px solid rgba(27, 48, 30, 0.08);
+}
+
+.review-section-container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.review-header-box {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.review-eyebrow {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #264e2d;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(45, 90, 54, 0.08);
+  border: 1px solid rgba(45, 90, 54, 0.2);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.review-main-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #152417;
+  margin-bottom: 0.75rem;
+}
+
+.review-main-title .text-accent-highlight {
+  color: #3B650A;
+}
+
+.review-intro-text {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #556258;
+  line-height: 1.6;
+}
+
+/* Premium Review Card */
+.review-card-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.review-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(27, 48, 30, 0.1);
+  border-radius: 28px;
+  padding: 3.5rem 3.2rem;
+  box-shadow: 0 16px 45px rgba(27, 48, 30, 0.06), 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1b301e 0%, #2e5c37 50%, #52b788 100%);
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(27, 48, 30, 0.24);
+  box-shadow: 0 26px 60px rgba(27, 48, 30, 0.1), 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Star Rating Strip */
+.review-rating-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(27, 48, 30, 0.08);
+}
+
+.star-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffb703;
+  color: #ffb703;
+  filter: drop-shadow(0 2px 4px rgba(255, 183, 3, 0.3));
+}
+
+.rating-score {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #152417;
+  margin-left: 0.6rem;
+}
+
+.amazon-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid rgba(255, 153, 0, 0.35);
+  border-radius: 999px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #b75e00;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.amazon-verified-badge svg {
+  width: 15px;
+  height: 15px;
+  color: #b75e00;
+}
+
+/* Review Quote Body */
+.review-quote-wrap {
+  position: relative;
+  margin-bottom: 2.2rem;
+}
+
+.quote-mark {
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(27, 48, 30, 0.14);
+  position: absolute;
+  top: -1.2rem;
+  left: -0.5rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.review-body-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #233526;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Reviewer Meta */
+.review-author-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1b301e 0%, #3e784a 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(27, 48, 30, 0.18);
+}
+
+.author-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #152417;
+  margin-bottom: 0.15rem;
+}
+
+.author-label {
+  font-size: 0.86rem;
+  color: #617364;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.verified-tick {
+  color: #2d8a4e;
+  font-weight: 700;
+}
+
+.author-source {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  color: #7b8c7f;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.amazon-brand-tag {
+  font-weight: 700;
+  color: #152417;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .customer-review-section.light-theme {
+    padding: 4.5rem 1.5rem 5.5rem;
+  }
+  .review-card {
+    padding: 2.2rem 1.8rem;
+    border-radius: 20px;
+  }
+  .review-body-text {
+    font-size: 1.1rem;
+  }
+  .review-author-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

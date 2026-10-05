@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Design System & Theme Tokens - Future Impact
+   ========================================================================== */
+
+:root {
+  --bg-primary: #08090d;
+  --accent-cyan: #00f2fe;
+  --accent-blue: #4facfe;
+  --accent-purple: #7f00ff;
+  --brand-green: #1b301e;
+  --accent-glow: rgba(0, 242, 254, 0.35);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(16px);
+  
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.4s var(--ease-out-expo);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: var(--bg-primary);
+  font-family: var(--font-main);
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-purple));
+  border-radius: 3px;
+}
+
+/* Atmospheric Glow */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+.glow-1 {
+  top: 10%;
+  left: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+}
+.glow-2 {
+  top: 60%;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+}
+
+/* Transparent Brand Header */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 3rem;
+  z-index: 100;
+  background: transparent;
+  border-bottom: none;
+  pointer-events: none;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.brand-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.08);
+}
+
+/* Full-Screen Hero Section with Sticky Canvas */
+.hero-scroll-wrapper {
+  position: relative;
+  height: 550vh;
+  background: var(--bg-primary);
+}
+
+.sticky-canvas-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#scrollCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+/* Ultra-clear Transparent Fullscreen Backdrop with Centered Text & Actions */
+.glass-content-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(8, 10, 15, 0.05) 0%, rgba(8, 10, 15, 0.25) 100%);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  z-index: 15;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: opacity 0.35s ease;
+}
+
+.glass-card-inner {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Spacer ensuring sand canvas "Future Impact" particle text (at 40% height) aligns cleanly above subheading */
+.glass-card-spacer {
+  height: clamp(60px, 12vh, 110px);
+  width: 100%;
+}
+
+.glass-subheading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(15px);
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 0 16px rgba(27, 48, 30, 0.9);
+}
+
+.glass-action-group {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.btn-shop {
+  background: var(--brand-green);
+  color: #ffffff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(27, 48, 30, 0.6), 0 0 20px rgba(27, 48, 30, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn-shop:hover {
+  transform: translateY(-3px);
+  background: #254229;
+  box-shadow: 0 14px 38px rgba(27, 48, 30, 0.8);
+}
+
+.btn-contact {
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+.btn-contact:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Transparent Sand Particle Animation Canvas */
+#sandCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* Footer info overlay */
+.hero-footer {
+  position: relative;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  background: #06070a;
+  z-index: 40;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.footer-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    height: 80px;
+  }
+  .brand-logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .glass-action-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 0.8rem;
+  }
+  .btn-shop, .btn-contact {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+  }
+  .hero-footer {
+    padding: 1.5rem 1.2rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}

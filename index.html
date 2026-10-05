@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Future Impact | Luxury Inspired by Nature</title>
+<meta name="description"
+content="Experience high-performance, uncompressed frame scroll animation powered by Future Impact.">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+rel="stylesheet">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/featured-products.css">
+<link rel="stylesheet" href="css/promise.css">
+<link rel="stylesheet" href="css/reviews.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<!-- Ambient Glow Effects -->
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+<!-- Loading Screen -->
+<div id="loaderScreen" class="loader-screen">
+<div class="loader-brand">
+<img src="Logo1.png" alt="Future Impact Logo" class="loader-logo">
+</div>
+<div class="loader-bar-wrap">
+<div id="loaderBarFill" class="loader-bar-fill"></div>
+</div>
+<div id="loaderStatus" class="loader-status">BUFFERING HIGH-RES FRAMES 0%</div>
+</div>
+<!-- Transparent Brand Header -->
+<header class="navbar">
+<a href="#" class="nav-brand">
+<img src="Logo1.png" alt="Future Impact Brand Logo" class="brand-logo-img">
+</a>
+</header>
+<!-- Full-Screen Hero Section with Sticky Canvas -->
+<main class="hero-scroll-wrapper">
+<div class="sticky-canvas-container">
+<canvas id="scrollCanvas"></canvas>
+<canvas id="sandCanvas"></canvas>
+<!-- Thin Modern Transparent Glass Backdrop Card for Typography & Actions -->
+<div id="glassContentCard" class="glass-content-card">
+<div class="glass-card-inner">
+<div class="glass-card-spacer"></div>
+<p id="glassSubheading" class="glass-subheading">Luxury Inspired by Nature.</p>
+<div id="glassActions" class="glass-action-group">
+<a href="#specialized-products" class="btn-shop">Shop Collection</a> <a
+href="#specialized-products" class="btn-contact">Contact Us</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Our Specialized Product Section (Light Mode) -->
+<section id="specialized-products" class="specialized-products-section light-theme">
+<!-- Botanical Decorative Background Leaves -->
+<div class="specialized-bg-leaf leaf-top-left" aria-hidden="true"><img src="top_left.png" alt="" loading="lazy">
+</div>
+<div class="specialized-bg-leaf leaf-bottom-left" aria-hidden="true"><img src="bottom_left.png" alt=""
+loading="lazy"></div>
+<div class="specialized-bg-leaf leaf-bottom-right" aria-hidden="true"><img src="bottom_right.png" alt=""
+loading="lazy"></div>
+<div class="section-container">
+<div class="section-header-box">
+<span class="section-eyebrow">Formulated For Excellence</span>
+<h2 class="section-main-title">Our <span class="text-accent-highlight">Specialized</span> Product</h2>
+<p class="section-intro-text">Engineered with botanical purity and sensory luxury to elevate your
+personal
+ritual.</p>
+</div>
+<div class="products-grid">
+<!-- 1. Hair Care -->
+<article class="product-card card-hair-care">
+<div class="product-image-wrapper" aria-label="Hair Care"><img src="Hair.png" alt="Hair Care"
+class="product-card-img" loading="lazy"></div>
+<h3 class="product-heading">Hair Care</h3>
+<p class="product-subheading">Always the best</p>
+<p class="product-desc-text">Nourish your hair naturally with time-tested herbs for stronger,
+shinier and
+healthier hair.</p>
+</article>
+<!-- 2. Skin Care -->
+<article class="product-card card-skin-care">
+<div class="product-image-wrapper" aria-label="Skin Care"><img src="Skin.png" alt="Skin Care"
+class="product-card-img" loading="lazy"></div>
+<h3 class="product-heading">Skin Care</h3>
+<p class="product-subheading">Expect more by default</p>
+<p class="product-desc-text">Reveal natural radiance with pure botanical care for healthy, glowing
+and
+youthful skin.</p>
+</article>
+<!-- 3. Lip Care -->
+<article class="product-card card-lip-care">
+<div class="product-image-wrapper" aria-label="Lip Care"><img src="Lip.png" alt="Lip Care"
+class="product-card-img" loading="lazy"></div>
+<h3 class="product-heading">Lip Care</h3>
+<p class="product-subheading">We're here to help</p>
+<p class="product-desc-text">Keep your lips naturally soft, smooth and nourished with gentle herbal
+ingredients.</p>
+</article>
+<!-- 4. Natural Willing -->
+<article class="product-card card-natural-willing">
+<div class="product-image-wrapper" aria-label="Natural Willing"><img src="NaturalWilling.png"
+alt="Natural Willing" class="product-card-img" loading="lazy"></div>
+<h3 class="product-heading">Natural Willing</h3>
+<p class="product-subheading">Ready to impress</p>
+<p class="product-desc-text">Pure. Natural. Effective. Made from the finest herbs for your everyday
+wellness.
+</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Featured Products Section (5 Botanical Products Grid) -->
+<section class="featured-products-section light-theme" id="featured-products">
+<!-- Botanical Decorative Background Leaves -->
+<div class="featured-bg-leaf leaf-prod-lefttop" aria-hidden="true"><img src="product_lefttop.png" alt=""
+loading="lazy"></div>
+<div class="featured-bg-leaf leaf-prod-leftbottom" aria-hidden="true"><img src="product_leftbuttom.png" alt=""
+loading="lazy"></div>
+<div class="featured-bg-leaf leaf-prod-righttop" aria-hidden="true"><img src="product_righttop.png" alt=""
+loading="lazy"></div>
+<div class="featured-bg-leaf leaf-prod-rightbottom" aria-hidden="true"><img src="product_rightbuttom.png" alt=""
+loading="lazy"></div>
+<div class="featured-products-container">
+<header class="featured-header-box">
+<span class="featured-eyebrow">Our Botanical Range</span>
+<h2 class="featured-main-title">Featured <span class="text-accent-highlight">Products</span></h2>
+<p class="featured-intro-text">Pure, unadulterated botanical powders crafted with precision to elevate
+your
+daily self-care ritual.</p>
+</header>
+<div class="featured-bento-grid">
+<!-- 1. Pack of 5 Ayurvedic Combo (Best Selling Product - Main Hero Bento Card) -->
+<article class="bento-card card-hibiscus">
+<img src="allone.png" alt="Ayurvedic Master Combo Background" class="bento-bg-img" loading="lazy">
+<div class="bento-combo-left">
+<div class="bento-badge-row">
+<span class="pill-badge">Ayurvedic Master Combo</span> <span class="bento-best-seller-tag">★
+Best Selling Product in Amazon</span>
+</div>
+<h3 class="bento-title">Amla, Reetha, Shikakai, Bhringraj &amp; Hibiscus</h3>
+<p class="bento-desc">Pack of 5 (70g Each). Complete 100% natural Ayurvedic hair care for
+growth, fall
+control, and dandruff defense.</p>
+<div class="bento-actions-row">
+<a href="products/combo.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/0idDxXD1" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+</article>
+<!-- 2. Reetha Powder (Top Right Card - #F1DCBC) -->
+<article class="bento-card card-reetha">
+<div class="bento-side-content">
+<h3 class="bento-side-title">Reetha</h3>
+<p class="bento-side-desc">Natural cleanser for clean &amp; healthy hair.</p>
+<div class="bento-actions-row">
+<a href="products/reetha.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/00Bro9dT" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+<div class="bento-thumb-wrap">
+<img src="Reetha/Reetha.png" alt="Reetha Powder" class="bento-thumb-img" loading="lazy">
+</div>
+</article>
+<!-- 3. Bhringraj Powder (Middle Right Card - #BED0A9) -->
+<article class="bento-card card-bhringraj">
+<div class="bento-side-content">
+<h3 class="bento-side-title">Bhringraj</h3>
+<p class="bento-side-desc">Strength &amp; vitality for healthier hair.</p>
+<div class="bento-actions-row">
+<a href="products/bhringraj.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/09oEJZaX" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+<div class="bento-thumb-wrap">
+<img src="bhringaraj/Bhringraj.png" alt="Bhringraj Powder" class="bento-thumb-img"
+loading="lazy">
+</div>
+</article>
+<!-- 4. Amla Fruit Powder (Bottom Row - Card 1) -->
+<article class="bento-card card-amla">
+<div class="bento-bottom-content">
+<h3 class="bento-bottom-title">Amla</h3>
+<p class="bento-bottom-desc">Natural nourishment for strong &amp; shiny hair.</p>
+<div class="bento-actions-row">
+<a href="products/amla.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/06UqzjGl" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+<div class="bento-large-thumb">
+<img src="amla/Amla.png" alt="Amla Fruit Powder" loading="lazy">
+</div>
+</article>
+<!-- 5. Hibiscus Powder (Bottom Row - Card 2, in between Amla and Shikakai) -->
+<article class="bento-card card-hibiscus-powder">
+<div class="bento-bottom-content">
+<h3 class="bento-bottom-title">Hibiscus</h3>
+<p class="bento-bottom-desc">Supports hair growth and healthy scalp.</p>
+<div class="bento-actions-row">
+<a href="products/hibiscus.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/08tYjIGo" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+<div class="bento-large-thumb">
+<img src="hibiscus/Hibiscus.png" alt="Hibiscus Flower Powder" loading="lazy">
+</div>
+</article>
+<!-- 6. Shikakai Powder (Bottom Row - Card 3) -->
+<article class="bento-card card-shikakai">
+<div class="bento-bottom-content">
+<h3 class="bento-bottom-title">Shikakai</h3>
+<p class="bento-bottom-desc">Gentle cleansing for soft &amp; smooth hair.</p>
+<div class="bento-actions-row">
+<a href="products/shikakai.html" class="btn-card-view">View Product</a> <a
+href="https://amzn.in/d/0fsECK77" target="_blank" rel="noopener noreferrer"
+class="btn-card-buy">Buy
+Now</a>
+</div>
+</div>
+<div class="bento-large-thumb">
+<img src="shikakai/Shikakai.png" alt="Shikakai Powder" loading="lazy">
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- The futureimpact Promise Section -->
+<section class="promise-section light-theme" id="brand-promise">
+<div class="promise-container">
+<header class="promise-header-box">
+<span class="promise-eyebrow">Our Philosophy</span>
+<h2 class="promise-main-title">The Future Impact <span class="text-accent-highlight">Promise</span></h2>
+<p class="promise-intro-text">Our steadfast dedication to botanical excellence, transparent
+sustainability, and
+uncompromising purity.</p>
+</header>
+<!-- Single-Row Auto-Scrolling Marquee Showcase -->
+<div class="promise-marquee-container" id="promiseMarquee">
+<div class="promise-track" id="promiseTrack">
+<div class="promise-grid">
+<!-- 1. Ethically Sourced -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Ethically Sourced Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="9"></circle> <path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9z"> </path> <path d="M3.6 9h16.8"></path> <path d="M3.6 15h16.8"></path> <path d="M12 8c1.5 1.5 2 2.5 2 4s-1 2.5-2 3"></path> </svg>
+</div>
+<h3 class="promise-heading">Ethically Sourced</h3>
+<p class="promise-desc">Traceable harvests partnered directly with regenerative growers
+honoring community
+fair-trade practices.</p>
+</article>
+<!-- 2. 100% Pure & Natural -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="100% Pure & Natural Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 2.5C8 7.5 5 11 5 15a7 7 0 0 0 14 0c0-4-3-7.5-7-12.5z"></path> <path d="M12 11c0 2.2 1.3 4 3 4.5"></path> <path d="M9.5 16.5c1 .5 2 .5 2.5.5"></path> </svg>
+</div>
+<h3 class="promise-heading">100% Pure &amp; Natural</h3>
+<p class="promise-desc">Zero additives, chemicals, or synthetic fillers. Nothing but raw,
+potent plant
+intelligence in every batch.</p>
+</article>
+<!-- 3. Premium Quality -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Premium Quality Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 3h12l3 5-9 13L3 8l3-5z"></path> <path d="M3 8h18"></path> <path d="M10 3l-2 5 4 13 4-13-2-5"></path> </svg>
+</div>
+<h3 class="promise-heading">Premium Quality</h3>
+<p class="promise-desc">Cold micro-milled processing preserves active polyphenols,
+nutrients, and optimum
+botanical bio-availability.</p>
+</article>
+<!-- 4. Sustainable Packaging -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Sustainable Packaging Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M7 19H4.8A1.8 1.8 0 0 1 3 17.2V6.8A1.8 1.8 0 0 1 4.8 5h14.4A1.8 1.8 0 0 1 21 6.8v10.4a1.8 1.8 0 0 1-1.8 1.8H17"> </path> <path d="M12 2v3"></path> <path d="M9 13l3-3 3 3"></path> <path d="M12 10v9"></path> <path d="M8 22h8"></path> </svg>
+</div>
+<h3 class="promise-heading">Sustainable Packaging</h3>
+<p class="promise-desc">Biodegradable, recyclable, and eco-conscious containers crafted to
+minimize our
+planetary footprint.</p>
+</article>
+<!-- 5. Preservative Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Preservative Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path> <path d="M9 12l2 2 4-4"></path> </svg>
+</div>
+<h3 class="promise-heading">Preservative Free</h3>
+<p class="promise-desc">Pure moisture-free micro-milling ensures zero artificial
+preservatives or shelf
+stabilizers.</p>
+</article>
+<!-- 6. Ammonia Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Ammonia Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 2v7.31"></path> <path d="M14 9.3V2"></path> <path d="M8.5 2h7"></path> <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path> <line x1="4" y1="4" x2="20" y2="20"></line> </svg>
+</div>
+<h3 class="promise-heading">Ammonia Free</h3>
+<p class="promise-desc">Completely free from harsh alkalis and ammonia, preserving your hair
+and skin
+cuticle integrity.</p>
+</article>
+<!-- 7. Chemical Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Chemical Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 2v5a2 2 0 0 1-.5 1.3L4 15.5A3 3 0 0 0 6.3 20h11.4A3 3 0 0 0 20 15.5L14.5 8.3A2 2 0 0 1 14 7V2"> </path> <path d="M8.5 2h7"></path> <line x1="3" y1="3" x2="21" y2="21"></line> </svg>
+</div>
+<h3 class="promise-heading">Chemical Free</h3>
+<p class="promise-desc">100% whole plant intelligence with zero synthetic derivatives,
+binders, or
+petroleum byproducts.</p>
+</article>
+<!-- 8. Metalic Salts Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Metalic Salts Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="9"></circle> <path d="M14.83 9.17a4 4 0 0 0-5.66 0"></path> <path d="M9.17 14.83a4 4 0 0 0 5.66 0"></path> <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line> </svg>
+</div>
+<h3 class="promise-heading">Metalic Salts Free</h3>
+<p class="promise-desc">Zero heavy metals or metallic salts, ensuring 100% compatibility
+with colored or
+treated hair.</p>
+</article>
+<!-- 9. Pesticides Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="Pesticides Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 21 2c-.5 4.5-1 6-2.1 11.7A7 7 0 0 1 11 20z"> </path> <path d="M12.5 13.5L8 18"></path> <line x1="4" y1="4" x2="20" y2="20"></line> </svg>
+</div>
+<h3 class="promise-heading">Pesticides Free</h3>
+<p class="promise-desc">Cultivated on pristine chemical-free soils and thoroughly tested for
+zero
+agricultural residues.</p>
+</article>
+<!-- 10. PPD Free -->
+<article class="promise-card">
+<div class="promise-icon-wrap" aria-label="PPD Free Icon">
+<svg class="promise-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="M8 12h8"></path> <path d="M12 8v8"></path> <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line> </svg>
+</div>
+<h3 class="promise-heading">PPD Free</h3>
+<p class="promise-desc">Free from Paraphenylenediamine and artificial dye couplers,
+eliminating common
+allergic reactions.</p>
+</article>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Review Section -->
+<section class="customer-review-section light-theme" id="customer-reviews">
+<div class="review-section-container">
+<header class="review-header-box">
+<span class="review-eyebrow">Real Experiences</span>
+<h2 class="review-main-title">What Our <span class="text-accent-highlight">Customers</span> Say</h2>
+<p class="review-intro-text">Authentic feedback from customers discovering the pure botanical
+difference.</p>
+</header>
+<div class="review-card-wrapper">
+<article class="review-card">
+<!-- Star Rating Strip (Five Stars) -->
+<div class="review-rating-bar">
+<div class="star-rating-row" aria-label="5 out of 5 stars rating">
+<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"> </polygon> </svg>
+<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"> </polygon> </svg>
+<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"> </polygon> </svg>
+<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"> </polygon> </svg>
+<svg class="star-icon" viewBox="0 0 24 24" fill="currentColor"> <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"> </polygon> </svg>
+<span class="rating-score">5.0 / 5.0</span>
+</div>
+<!-- Amazon Verified Purchase Badge -->
+<div class="amazon-verified-badge">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <polyline points="20 6 9 17 4 12"></polyline> </svg>
+<span>Amazon Verified Purchase</span>
+</div>
+</div>
+<!-- Review Body Quote -->
+<div class="review-quote-wrap">
+<span class="quote-mark">&ldquo;</span>
+<blockquote class="review-body-text">Great product. It genuinely helped me. Far better from the cosmetics and chemicals. As per advice i have used it and my hair and scalp looks healthier.</blockquote>
+</div>
+<!-- Reviewer Metadata -->
+<div class="review-author-meta">
+<div class="author-info">
+<div class="author-avatar-circle">A</div>
+<div class="author-text-wrap"><span class="author-name">Amazon Customer</span><span
+class="author-label"><span class="verified-tick">&#10003;</span> Verified
+Buyer</span></div>
+</div>
+<div class="author-source"><span>Reviewed on</span><strong class="amazon-brand-tag">Amazon
+India</strong>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Global Brand Footer (#1b301e) -->
+<footer class="site-footer" id="site-footer">
+<!-- Footer Dynamic Background SVG -->
+<div class="footer-bg-svg-wrap" aria-hidden="true">
+<svg width="100%" height="100%" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"> <defs> <linearGradient id="footer-gradient" x1="50%" y1="100%" x2="50%" y2="0%"> <stop offset="5%" stop-color="#2dc653"></stop> <stop offset="95%" stop-color="#2dc653"></stop> </linearGradient> </defs> <path d="M 0,600 L 0,150 C 120.08612440191388,125.94258373205741 240.17224880382776,101.88516746411483 334,118 C 427.82775119617224,134.11483253588517 495.3971291866029,190.4019138755981 585,202 C 674.6028708133971,213.5980861244019 786.2392344497606,180.5071770334928 888,183 C 989.7607655502394,185.4928229665072 1081.6459330143541,223.56937799043064 1172,224 C 1262.3540669856459,224.43062200956936 1351.1770334928228,187.21531100478467 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(#footer-gradient)" fill-opacity="0.16"></path> <path d="M 0,600 L 0,350 C 96.65071770334927,374.9569377990431 193.30143540669854,399.9138755980861 275,395 C 356.69856459330146,390.0861244019139 423.444976076555,355.30143540669854 534,336 C 644.555023923445,316.69856459330146 798.9186602870814,312.88038277511964 917,326 C 1035.0813397129186,339.11961722488036 1116.8803827751196,369.17703349282294 1198,376 C 1279.1196172248804,382.82296650717706 1359.55980861244,366.41148325358853 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="url(#footer-gradient)" fill-opacity="0.25"></path> </svg>
+</div>
+<!-- Organic Wave Shape Transition -->
+<div class="footer-wave-divider" aria-hidden="true">
+<svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none"> <path d="M0,32 C240,95 480,115 720,65 C960,15 1200,45 1440,80 L1440,0 L0,0 Z" fill="#F4F7EF"></path> </svg>
+</div>
+<div class="footer-container">
+<div class="footer-grid">
+<!-- Left Column: Company Logo, Name, Address, Contact, Email -->
+<div class="footer-col-brand">
+<a href="#" class="footer-brand-header"><img src="Logo1.png" alt="Future Impact Logo"
+class="footer-brand-logo"><span class="footer-brand-name">Future Impact</span></a>
+<ul class="footer-contact-list">
+<li class="footer-contact-item"><svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Address Pin Icon"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path> <circle cx="12" cy="10" r="3"></circle> </svg><span>232/A KALIPUR EXTENTION ROAD, HARIDEVPUR, KOLKATA- 700082</span></li>
+<li class="footer-contact-item"><svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Phone Icon"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"> </path> </svg><span>Contact: <a href="tel:+919123999907">+91 91239 99907</a></span></li>
+<li class="footer-contact-item"><svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Email Icon"> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"> </path> <polyline points="22,6 12,13 2,6"></polyline> </svg><span>Email: <a href="mailto:care@futureimpact.in">care@futureimpact.in</a></span>
+</li>
+</ul>
+</div>
+<!-- Middle Column: Five Botanical Products -->
+<div class="footer-col-products">
+<h3 class="footer-col-title">Our Products</h3>
+<ul class="footer-products-list">
+<li><a href="#featured-products" class="footer-product-link">Hibiscus Powder</a></li>
+<li><a href="#featured-products" class="footer-product-link">Reetha Powder</a></li>
+<li><a href="#featured-products" class="footer-product-link">Bhringraj Powder</a></li>
+<li><a href="#featured-products" class="footer-product-link">Amla Fruit Powder</a></li>
+<li><a href="#featured-products" class="footer-product-link">Shikakai Powder</a></li>
+</ul>
+</div>
+<!-- Right Column: Submit Formal Query Form & Social Media Links -->
+<div class="footer-col-query">
+<div class="footer-query-box">
+<h3 class="footer-col-title">Partner &amp; Inquire</h3>
+<p class="footer-query-text">Have a wholesale, retail, or custom formulation inquiry? Reach out
+directly to
+our botanical team.</p>
+<a href="contact.html" class="btn-query-form" id="btnQueryForm">
+<span>Contact Us</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="5" y1="12" x2="19" y2="12"></line> <polyline points="12 5 19 12 12 19"></polyline> </svg>
+</a>
+</div>
+<div class="footer-socials-wrap">
+<span class="socials-heading">Follow Our Journey</span>
+<div class="social-links-row">
+<!-- Facebook -->
+<a href="https://www.facebook.com/profile.php?id=61590463904035" target="_blank"
+rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
+</a>
+<!-- Instagram -->
+<a href="https://www.instagram.com/futureimpact_official/?hl=en" target="_blank"
+rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"> <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path> <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="footer-bottom-bar">
+<span>&copy; 2026 Future Impact. All Rights Reserved.</span>
+</div>
+</div>
+</footer>
+<!-- Application Logic Modules -->
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
